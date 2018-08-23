@@ -34,7 +34,7 @@ class CreateStudentsTable extends Migration
             $table->text('certificate_exam_url')->nullable();
             $table->text('certificate_qualification_url')->nullable();
             $table->text('avatar')->nullable();
-            
+            $table->boolean('complete_data')->default(false);
         });
     }
 
