@@ -11,7 +11,10 @@ class Owner extends Model
 
     // Set the fillable field for mass assigment.
     protected $fillable = [
-        //
+        'name', 'email', 'password', 'school_id', 'civilian_id',
+        'family_id', 'ownership_id', 'birthdate', 'birthplace',
+        'address', 'city', 'state', 'country', 'zipcode',
+        'contact', 'emergency_contact', 'avatar',
     ];
 
     // Set RouteKeyName to grab from url.

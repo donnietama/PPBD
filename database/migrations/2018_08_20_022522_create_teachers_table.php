@@ -17,6 +17,8 @@ class CreateTeachersTable extends Migration
             $table->increments('id');
             $table->integer('school_id');
             $table->bigInteger('working_id');
+            $table->string('name');
+            $table->string('degree');
             $table->date('birthdate');
             $table->string('birthplace');
             $table->date('contract_begin');

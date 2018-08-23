@@ -11,12 +11,20 @@ class Teacher extends Model
 
     // Set the fillable field for mass assigment.
     protected $fillable = [
-        'name', 'birth', 'degree', 'status', 'address', 'city', 'province', 'contact', 'emergenc', 'lesson_id', 'bio', 'avatar'
+        'school_id', 'working_id', 'name', 'degree', 'birthdate',
+        'birthplace', 'contract_begin', 'contract_expire', 'status',
+        'address', 'city', 'state', 'country', 'zipcode', 'bio',
+        'avatar',
     ];
 
     // Set RouteKeyName to grab from url.
     public function getRouteKeyName()
     {
         return 'id';
+    }
+
+    public function school()
+    {
+        return $this->belongsTo(School::class);
     }
 }

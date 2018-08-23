@@ -11,7 +11,12 @@ class Student extends Model
 
     // Set the fillable field for mass assigment.
     protected $fillable = [
-        'name', 'birth', 'address', 'city', 'province', 'contact', 'emergenc', 'emergenrel', 'email', 'password', 'avatar',
+        'name', 'username', 'email', 'password', 'birthdate',
+        'birthplace', 'address', 'city', 'state', 'country',
+        'contact', 'emergency_contact', 'emergency_contact_relation',
+        'math_scores', 'science_scores', 'literature_scores',
+        'certificate_exam_url', 'certificate_qualification_url',
+        'avatar',
     ];
 
     // Set RouteKeyName to grab from url.
