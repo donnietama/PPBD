@@ -34,7 +34,7 @@ class CreateSchoolsTable extends Migration
             $table->bigInteger('contact');
             $table->bigInteger('emergency_contact');
             $table->text('preview_url');
-            $table->timestamps();
+            
         });
     }
 

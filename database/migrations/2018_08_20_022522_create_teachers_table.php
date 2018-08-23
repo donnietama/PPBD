@@ -29,7 +29,7 @@ class CreateTeachersTable extends Migration
             $table->integer('zipcode');
             $table->text('bio');
             $table->text('avatar');
-            $table->timestamps();
+            
         });
     }
 

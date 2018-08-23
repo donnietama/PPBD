@@ -18,7 +18,7 @@ class CreateClassesTable extends Migration
             $table->integer('school_id');
             $table->string('class_name');
             $table->integer('capacity');
-            $table->timestamps();
+            
         });
     }
 
