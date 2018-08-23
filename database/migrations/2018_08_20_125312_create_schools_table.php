@@ -27,7 +27,7 @@ class CreateSchoolsTable extends Migration
             $table->integer('6th_grade_cap')->nullable();
             $table->boolean('open_regist')->default(false);
             $table->date('regist_begin')->nullable();
-            $table->date('regist_ended')->nullable();
+            $table->date('regist_expire')->nullable();
             $table->text('address');
             $table->integer('years_of_construction');
             $table->string('email')->unique();
