@@ -26,8 +26,8 @@ class CreateStudentsTable extends Migration
             $table->string('state')->nullable();
             $table->string('country')->nullable();
             $table->bigInteger('contact')->nullable();
-            $table->bigInteger('emergenc_contact')->nullable();
-            $table->bigInteger('emergenc_contact_relation')->nullable();
+            $table->bigInteger('emergency_contact')->nullable();
+            $table->bigInteger('emergency_contact_relation')->nullable();
             $table->double('math_scores', 100, 2)->nullable();
             $table->double('science_scores', 100, 2)->nullable();
             $table->double('literature_scores', 100, 2)->nullable();
