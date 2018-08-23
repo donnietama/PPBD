@@ -48,7 +48,7 @@ class StudentController extends Controller
             'city'          =>  'string|required',
             'province'      =>  'string|required',
             'contact'       =>  'numeric|required',
-            'emergenc'      =>  'numeric|required',
+            'emergency'      =>  'numeric|required',
             'emergenrel'    =>  'string|required',
             'avatar'        =>  'image|nullable',
         ]);
@@ -109,7 +109,7 @@ class StudentController extends Controller
             'city'          =>  'string|required',
             'province'      =>  'string|required',
             'contact'       =>  'numeric|required',
-            'emergenc'      =>  'numeric|required',
+            'emergency'      =>  'numeric|required',
             'emergenrel'    =>  'string|required',
             'avatar'        =>  'image|nullable',
         ]);

@@ -32,7 +32,7 @@ class CreateOwnersTable extends Migration
             $table->bigInteger('contact')->nullable();
             $table->bigInteger('emergency_contact')->nullable();
             $table->text('avatar')->nullable();
-            
+            $table->boolean('complete_data')->default(false);
         });
     }
 

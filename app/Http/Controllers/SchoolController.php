@@ -39,17 +39,25 @@ class SchoolController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request, [
-            'name'      =>  'string|required',
-            'owner_id'  =>  'string|required',
-            'city'      =>  'string|required',
-            'region'    =>  'string|required',
-            'address'   =>  'string|required',
-            'postal'    =>  'numeric|required',
-            'plan_id'   =>  'numeric|required',
-            'email'     =>  'nullable|string|email|max:255|unique:users',
-            'contact'   =>  'numeric|nullable',
-            'capacity'  =>  'numeric|required',
-            'image'     =>  'image|required',
+            'owner_id'              =>  'numeric|required',
+            'name'                  =>  'string|required',
+            'predicate'             =>  'string|required',
+            'capacity'              =>  'numeric|required',
+            '1st_grade_cap'         =>  'numeric|nullable',
+            '2nd_grade_cap'         =>  'numeric|nullable',
+            '3rd_grade_cap'         =>  'numeric|nullable',
+            '4th_grade_cap'         =>  'numeric|nullable',
+            '5th_grade_cap'         =>  'numeric|nullable',
+            'open_regist'           =>  'boolean|required',
+            'regist_begin'          =>  'date|nullable',
+            'regist_expire'         =>  'date|nullable',
+            'address'               =>  'string|required',
+            'year_of_construction'  =>  'date|required',
+            'email'                 =>  'email|required|unique:schools',
+            'contact'               =>  'numeric|required',
+            'emergency_contact'     =>  'numeric|required',
+            'preview_url'           =>  'string|nullable'
+
         ]);
 
         if($validator->fails()) {
@@ -96,14 +104,24 @@ class SchoolController extends Controller
         $schools = School::findOrFail($school);
 
         $validator = Validator::make($request, [
-            'name'      =>  'string|required',
-            'owner_id'  =>  'string|required',
-            'city'      =>  'string|required',
-            'region'    =>  'string|required',
-            'address'   =>  'string|required',
-            'postal'    =>  'numeric|required',
-            'plan_id'   =>  'numeric|required|disabled',
-            'email'     =>  'required|string|email|max:255|unique:users|disabled',
+            'owner_id'              =>  'numeric|required',
+            'name'                  =>  'string|required',
+            'predicate'             =>  'string|required',
+            'capacity'              =>  'numeric|required',
+            '1st_grade_cap'         =>  'numeric|nullable',
+            '2nd_grade_cap'         =>  'numeric|nullable',
+            '3rd_grade_cap'         =>  'numeric|nullable',
+            '4th_grade_cap'         =>  'numeric|nullable',
+            '5th_grade_cap'         =>  'numeric|nullable',
+            'open_regist'           =>  'boolean|required',
+            'regist_begin'          =>  'date|nullable',
+            'regist_expire'         =>  'date|nullable',
+            'address'               =>  'string|required',
+            'year_of_construction'  =>  'date|required',
+            'email'                 =>  'email|required|unique:schools',
+            'contact'               =>  'numeric|required',
+            'emergency_contact'     =>  'numeric|required',
+            'preview_url'           =>  'string|nullable'
         ]);
 
         if($validator->fails()) {

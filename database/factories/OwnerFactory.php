@@ -13,7 +13,7 @@ $factory->define(App\Owner::class, function (Faker $faker) {
         'city'          => $faker->city,
         'province'      => $faker->state,
         'contact'       => $faker->unique()->e164PhoneNumber,
-        'emergenc'      => $faker->unique()->e164PhoneNumber,
+        'emergency'      => $faker->unique()->e164PhoneNumber,
         'avatar'        => 'https://ppdb.dev/storage/svg/girl.svg',
         'email'         => $faker->unique()->freeEmail,
         'password'      => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret

@@ -39,15 +39,8 @@ class OwnerController extends Controller
     {
         $validator = Validator::make($request, [
             'name'          =>  'string|required',
-            'birth'         =>  'date|required',
-            'address'       =>  'string|required',
-            'city'          =>  'string|required',
-            'province'      =>  'string|required',
-            'contact'       =>  'numeric|required',
-            'emergenc'      =>  'numeric|required',
-            'emergenrel'    =>  'string|required',
-            'avatar'        =>  'image|nullable',
-            'email'         =>  'required|string|email|max:255|unique:users',
+            'username'      =>  'string|required',
+            'email'         =>  'required|string|email|max:255|unique:students',
             'password'      =>  'required|string|min:6|confirmed',
         ]);
 
@@ -92,25 +85,42 @@ class OwnerController extends Controller
      */
     public function update(Request $request, Owner $owner)
     {
-        $owners = Owner::findOrFail($owner);
-        $validator = Validator::make($request, [
-            'name'          =>  'string|required',
-            'birth'         =>  'date|required',
-            'address'       =>  'string|required',
-            'city'          =>  'string|required',
-            'province'      =>  'string|required',
-            'contact'       =>  'numeric|required',
-            'emergenc'      =>  'numeric|required',
-            'emergenrel'    =>  'string|required',
-            'avatar'        =>  'image|nullable',
-            'email'         =>  'required|string|email|max:255|unique:users',
-            'password'      =>  'required|string|min:6|confirmed',
+        /**
+         * User harus melengkapi data diri sebelum mendaftarkan
+         * sekolah baru. Jika data tidak lengkap, abaikan field
+         * complete data.
+         * 
+         * Namun jika data lengkap dan terisi semua, update
+         * field complete data ke true (1), untuk validasi
+         * sebelum melanjutkan proses pendaftaran sekolah
+         * baru.
+         */
+        $owners     = Owner::findOrFail($owner);
+        $validator  = Validator::make($request, [
+            'civilian_id'       => 'numeric|required',
+            'family_id'         => 'numeric|required',
+            'ownership_id'      => 'numeric|required',
+            'birthdate'         => 'date|required',
+            'birthplace'        => 'string|required',
+            'address'           => 'string|required',
+            'city'              => 'string|required',
+            'state'             => 'string|required',
+            'zipcode'           => 'numeric|required',
+            'contact'           => 'numeric|required',
+            'emergency_contact' => 'numeric|required',
         ]);
 
         if($validator->fails()) {
             return response()->json()->withErrors($validator);
         }
+        
         $modified = $owner->fill($request->all())->save();
+        
+        if($modified) {
+            $owner->complete_data = true;
+            $owner->save();
+        }
+        
         return $modified;
     }
 

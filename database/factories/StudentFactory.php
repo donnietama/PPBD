@@ -13,7 +13,7 @@ $factory->define(App\Student::class, function (Faker $faker) {
         'city'          => $faker->city,
         'province'      => $faker->region,
         'contact'       => $faker->phoneNumber,
-        'emergenc'      => $faker->phoneNumber,
+        'emergency'      => $faker->phoneNumber,
         'emergenrel'    => 'Family',
         'avatar'        => 'https://ppdb.dev/storage/svg/girl.svg',
     ];
