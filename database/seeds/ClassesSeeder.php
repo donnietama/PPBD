@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class ClassManagementsSeeder extends Seeder
+class ClassesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,7 @@ class ClassManagementsSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\ClassManagement::class, 10)->create()->each(function ($cm) {
+        factory(App\Classes::class, 10)->create()->each(function ($cm) {
             $cm->save();
         });
         return $this->command->info('Class Table Seeded!');

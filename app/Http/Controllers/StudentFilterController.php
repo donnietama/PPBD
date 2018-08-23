@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
 
-class NewStudentFilterController extends Controller
+class StudentFilterController extends Controller
 {
     // Saring data user yang baru mendaftar dengan pendaftar sebelumnya.
     public function index()
@@ -18,7 +18,7 @@ class NewStudentFilterController extends Controller
                         english,
                         @currentRANK := @currentRANK + 1 AS rank
                     from
-                        new_students n, users u, (select @currentRANK := 0) r
+                        student_files n, users u, (select @currentRANK := 0) r
                     where n.user_id = u.id
                     order by case when
                         math > science

@@ -16,7 +16,7 @@ class SchoolController extends Controller
      */
     public function index()
     {
-        $schools = School::all();
+        $schools = School::with('owner')->get();
         return $schools;
     }
 

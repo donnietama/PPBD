@@ -16,15 +16,22 @@ class CreateOwnersTable extends Migration
         Schema::create('owners', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->date('birth');
-            $table->string('address');
-            $table->string('city');
-            $table->string('province');
-            $table->bigInteger('contact')->unique();
-            $table->bigInteger('emergenc')->unique();
-            $table->text('avatar');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->string('password');
+            $table->integer('school_id')->nullable();
+            $table->bigInteger('civilian_id')->nullable();
+            $table->bigInteger('family_id')->nullable();
+            $table->bigInteger('ownership_id')->nullable();
+            $table->date('birthdate')->nullable();
+            $table->string('birthplace')->nullable();
+            $table->text('address')->nullable();
+            $table->string('city')->nullable();
+            $table->string('state')->nullable();
+            $table->string('country')->nullable();
+            $table->integer('zipcode')->nullable();
+            $table->bigInteger('contact')->nullable();
+            $table->bigInteger('emergency_contact')->nullable();
+            $table->text('avatar')->nullable();
             $table->timestamps();
         });
     }

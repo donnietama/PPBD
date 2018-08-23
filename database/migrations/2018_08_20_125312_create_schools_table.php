@@ -15,18 +15,25 @@ class CreateSchoolsTable extends Migration
     {
         Schema::create('schools', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
             $table->integer('owner_id');
-            $table->string('city');
-            $table->string('region');
-            $table->string('address');
-            $table->string('postal');
-            $table->integer('plan_id');
-            $table->string('email')->nulable();
-            $table->bigInteger('contact')->unique();
-            $table->bigInteger('emergenc')->unique();
+            $table->string('predicate');
+            $table->string('status');
             $table->integer('capacity');
-            $table->text('image');
+            $table->integer('1st_grade_cap')->nullable();
+            $table->integer('2nd_grade_cap')->nullable();
+            $table->integer('3rd_grade_cap')->nullable();
+            $table->integer('4th_grade_cap')->nullable();
+            $table->integer('5th_grade_cap')->nullable();
+            $table->integer('6th_grade_cap')->nullable();
+            $table->boolean('open_regist')->default(false);
+            $table->date('regist_begin')->nullable();
+            $table->date('regist_ended')->nullable();
+            $table->text('address');
+            $table->integer('years_of_construction');
+            $table->string('email')->unique();
+            $table->bigInteger('contact');
+            $table->bigInteger('emergency_contact');
+            $table->text('preview_url');
             $table->timestamps();
         });
     }

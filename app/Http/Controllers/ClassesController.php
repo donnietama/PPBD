@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\ClassManagement;
+use App\Classes;
 use Illuminate\Http\Request;
 
 use Validator;
 
-class ClassManagementController extends Controller
+class ClassesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class ClassManagementController extends Controller
      */
     public function index()
     {
-        $classRooms = ClassManagement::all();
+        $classRooms = Classes::all();
         return $classRooms;
     }
 
@@ -48,31 +48,31 @@ class ClassManagementController extends Controller
             return redirect()->back()->withErrors($validator);
         }
 
-        $storedData = ClassManagement::create($request->all());
+        $storedData = Classes::create($request->all());
         return $storedData;
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\ClassManagement  $classManagement
+     * @param  \App\Classes  $Classes
      * @return \Illuminate\Http\Response
      */
-    public function show(ClassManagement $classManagement)
+    public function show(Classes $Classes)
     {
-        $classDetails = ClassManagement::findOrFail($classManagement);
+        $classDetails = Classes::findOrFail($Classes);
         return view('classes.show', compact('classDetails'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\ClassManagement  $classManagement
+     * @param  \App\Classes  $Classes
      * @return \Illuminate\Http\Response
      */
-    public function edit(ClassManagement $classManagement)
+    public function edit(Classes $Classes)
     {
-        $specifiedClass = ClassManagement::findOrFail($classManagement);
+        $specifiedClass = Classes::findOrFail($Classes);
         return view('classes.edit', compact('specifiedClass'));
     }
 
@@ -80,10 +80,10 @@ class ClassManagementController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\ClassManagement  $classManagement
+     * @param  \App\Classes  $Classes
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ClassManagement $classManagement)
+    public function update(Request $request, Classes $Classes)
     {
         $validator = Validator::make($request, [
             'class_name'    => 'string|required|max:191',
@@ -95,19 +95,19 @@ class ClassManagementController extends Controller
             return redirect()->back()->withErrors($validator);
         }
 
-        $editedData = ClassManagement::fill($request->all())->save();
+        $editedData = Classes::fill($request->all())->save();
         return $editedData;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\ClassManagement  $classManagement
+     * @param  \App\Classes  $Classes
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ClassManagement $classManagement)
+    public function destroy(Classes $Classes)
     {
-        $class = ClassManagement::findOrFail($classManagement);
+        $class = Classes::findOrFail($Classes);
         $class->destroy();
     }
 }

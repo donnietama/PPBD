@@ -6,6 +6,7 @@ $factory->define(App\Owner::class, function (Faker $faker) {
     $width = 800;
     $height = 640;
     return [
+        'school_id'     => $faker->numberBetween($min=1, $max=10),
         'name'          => $faker->name,
         'birth'         => $faker->date,
         'address'       => $faker->address,

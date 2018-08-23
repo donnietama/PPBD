@@ -29,7 +29,7 @@ class StudentController extends Controller
          * Show classes list and put it into the select
          * option property.
          */
-        $classes = ClassManagement::all();
+        $classes = Classes::all();
         return $classes;
     }
 
