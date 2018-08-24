@@ -1,10 +1,10 @@
 <template>
     <figure>
-        <button type="button" class="button is-primary" @click="showLoginModal = true">
+        <button type="button" class="button is-info is-rounded" @click="showLoginModal = true">
             <span class="icon is-small">
                 <i class="fas fa-sign-in-alt"></i>
             </span>
-            <span>Sign in</span>
+            <span>Masuk</span>
         </button>
         <login-modal :showLoginModal="showLoginModal" @close="showLoginModal = false"></login-modal>
     </figure>

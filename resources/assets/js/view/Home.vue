@@ -1,6 +1,13 @@
 <template>
     <main>
-        <hero-component :title="title" :subtitle="subtitle"></hero-component>
+        <hero-component>
+            <h1 slot="title" class="title">
+                Lorem ipsum.
+            </h1>
+            <h2 slot="subtitle" class="subtitle">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod non commodi, odit eum sunt enim cumque nesciunt odio ea eaque ratione! Odio libero atque beatae et, error omnis maiores harum.
+            </h2>
+        </hero-component>
         <section class="section">
             <div class="container">
                 <div class="row justify-content-center">
@@ -22,14 +29,3 @@
         </section>
     </main>
 </template>
-
-<script>
-    export default {
-        data() {
-            return {
-                title: `This is a home component's title.`,
-                subtitle: `This is a home component's subtitle.`
-            }
-        }
-    }
-</script>

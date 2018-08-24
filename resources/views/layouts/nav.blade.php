@@ -22,19 +22,7 @@
         <!-- Login button -->
         <div class="navbar-end">
             <div class="navbar-item">
-                <div class="field is-grouped">
-                    <div class="control">
-                        <login-button></login-button>
-                    </div>
-                    <div class="control">
-                        <a class="button is-info is-outlined">
-                            <span class="icon is-small">
-                                <i class="fas fa-book"></i>
-                            </span>
-                            <span>Tutorials</span>
-                        </a>
-                    </div>
-                </div>
+                <login-button></login-button>
             </div>
         </div>
         <!-- END: Login button -->

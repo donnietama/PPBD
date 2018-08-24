@@ -15004,7 +15004,7 @@ var routes = [{
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(18)
+var __vue_script__ = null
 /* template */
 var __vue_template__ = __webpack_require__(19)
 /* template functional */
@@ -15045,47 +15045,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 18 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            title: "This is a home component's title.",
-            subtitle: "This is a home component's subtitle."
-        };
-    }
-});
-
-/***/ }),
+/* 18 */,
 /* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15096,9 +15056,27 @@ var render = function() {
   return _c(
     "main",
     [
-      _c("hero-component", {
-        attrs: { title: _vm.title, subtitle: _vm.subtitle }
-      }),
+      _c("hero-component", [
+        _c(
+          "h1",
+          { staticClass: "title", attrs: { slot: "title" }, slot: "title" },
+          [_vm._v("\n            Lorem ipsum.\n        ")]
+        ),
+        _vm._v(" "),
+        _c(
+          "h2",
+          {
+            staticClass: "subtitle",
+            attrs: { slot: "subtitle" },
+            slot: "subtitle"
+          },
+          [
+            _vm._v(
+              "\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod non commodi, odit eum sunt enim cumque nesciunt odio ea eaque ratione! Odio libero atque beatae et, error omnis maiores harum.\n        "
+            )
+          ]
+        )
+      ]),
       _vm._v(" "),
       _vm._m(0)
     ],
@@ -15151,7 +15129,7 @@ if (false) {
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(21)
+var __vue_script__ = null
 /* template */
 var __vue_template__ = __webpack_require__(22)
 /* template functional */
@@ -15192,47 +15170,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 21 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            title: 'This is about page.',
-            subtitle: 'This is a subtitle for about page.'
-        };
-    }
-});
-
-/***/ }),
+/* 21 */,
 /* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15243,9 +15181,27 @@ var render = function() {
   return _c(
     "main",
     [
-      _c("hero-component", {
-        attrs: { title: _vm.title, subtitle: _vm.subtitle }
-      }),
+      _c("hero-component", [
+        _c(
+          "h1",
+          { staticClass: "title", attrs: { slot: "title" }, slot: "title" },
+          [_vm._v("\n            About's page title.\n        ")]
+        ),
+        _vm._v(" "),
+        _c(
+          "h2",
+          {
+            staticClass: "subtitle",
+            attrs: { slot: "subtitle" },
+            slot: "subtitle"
+          },
+          [
+            _vm._v(
+              "\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, animi eius architecto dolor distinctio dolorem alias, consequuntur culpa aspernatur rerum recusandae sapiente dolores aperiam maiores cupiditate obcaecati beatae suscipit vero.\n        "
+            )
+          ]
+        )
+      ]),
       _vm._v(" "),
       _vm._m(0)
     ],
@@ -16282,7 +16238,7 @@ module.exports = function spread(callback) {
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(46)
+var __vue_script__ = null
 /* template */
 var __vue_template__ = __webpack_require__(47)
 /* template functional */
@@ -16323,31 +16279,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 46 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['title', 'subtitle']
-});
-
-/***/ }),
+/* 46 */,
 /* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16355,21 +16287,14 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("section", { staticClass: "hero is-medium is-light is-bold" }, [
+  return _c("section", { staticClass: "hero is-fullheight is-info is-bold" }, [
     _c("div", { staticClass: "hero-body" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("h1", { staticClass: "title" }, [
-          _vm._v(
-            "\r\n                " + _vm._s(_vm.title) + "\r\n            "
-          )
-        ]),
-        _vm._v(" "),
-        _c("h2", { staticClass: "subtitle" }, [
-          _vm._v(
-            "\r\n                " + _vm._s(_vm.subtitle) + "\r\n            "
-          )
-        ])
-      ])
+      _c(
+        "div",
+        { staticClass: "container" },
+        [_vm._t("title"), _vm._v(" "), _vm._t("subtitle")],
+        2
+      )
     ])
   ])
 }
@@ -17250,7 +17175,7 @@ var render = function() {
       _c(
         "button",
         {
-          staticClass: "button is-primary",
+          staticClass: "button is-info is-rounded",
           attrs: { type: "button" },
           on: {
             click: function($event) {
@@ -17258,7 +17183,7 @@ var render = function() {
             }
           }
         },
-        [_vm._m(0), _vm._v(" "), _c("span", [_vm._v("Sign in")])]
+        [_vm._m(0), _vm._v(" "), _c("span", [_vm._v("Masuk")])]
       ),
       _vm._v(" "),
       _c("login-modal", {
