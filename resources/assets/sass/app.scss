@@ -1,12 +1,11 @@
+// If you need to modify Bulma variables to so before importing it!
+@import './node_modules/bulma/bulma.sass';
+@import '~bulma-extensions/bulma-calendar/dist/css/bulma-calendar.sass';
+@import '~bulma-extensions/bulma-divider/dist/css/bulma-divider.sass';
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-// Variables
-@import 'variables';
-
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
 
 .navbar-laravel {
   background-color: #fff;
