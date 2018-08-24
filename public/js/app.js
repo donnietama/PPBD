@@ -3736,7 +3736,7 @@ window.axios.defaults.headers.common = {
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('hero-component', __webpack_require__(45));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('hero-component-full', __webpack_require__(48));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('login-button', __webpack_require__(51));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('login-button', __webpack_require__(77));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('login-modal', __webpack_require__(54));
 
 var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
@@ -16492,135 +16492,9 @@ if (false) {
 }
 
 /***/ }),
-/* 51 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(52)
-/* template */
-var __vue_template__ = __webpack_require__(53)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources\\assets\\js\\components\\LoginButton.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-560758d4", Component.options)
-  } else {
-    hotAPI.reload("data-v-560758d4", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 52 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            showLoginModal: false
-        };
-    }
-});
-
-/***/ }),
-/* 53 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "figure",
-    [
-      _c(
-        "button",
-        {
-          staticClass: "button is-primary",
-          attrs: { type: "button" },
-          on: {
-            click: function($event) {
-              _vm.showLoginModal = true
-            }
-          }
-        },
-        [_vm._m(0), _vm._v(" "), _c("span", [_vm._v("Sign in")])]
-      ),
-      _vm._v(" "),
-      _c("login-modal", {
-        attrs: { showLoginModal: _vm.showLoginModal },
-        on: {
-          close: function($event) {
-            _vm.showLoginModal = false
-          }
-        }
-      })
-    ],
-    1
-  )
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("span", { staticClass: "icon is-small" }, [
-      _c("i", { staticClass: "fas fa-sign-in-alt" })
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-560758d4", module.exports)
-  }
-}
-
-/***/ }),
+/* 51 */,
+/* 52 */,
+/* 53 */,
 /* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17285,6 +17159,138 @@ exports.push([module.i, "\n.login-modal[data-v-7b17fd7b] {\n  width: 400px;\n}\n
 
 // exports
 
+
+/***/ }),
+/* 74 */,
+/* 75 */,
+/* 76 */,
+/* 77 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(78)
+/* template */
+var __vue_template__ = __webpack_require__(79)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\buttons\\TriggerLoginModal.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-ca1555cc", Component.options)
+  } else {
+    hotAPI.reload("data-v-ca1555cc", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 78 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            showLoginModal: false
+        };
+    }
+});
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "figure",
+    [
+      _c(
+        "button",
+        {
+          staticClass: "button is-primary",
+          attrs: { type: "button" },
+          on: {
+            click: function($event) {
+              _vm.showLoginModal = true
+            }
+          }
+        },
+        [_vm._m(0), _vm._v(" "), _c("span", [_vm._v("Sign in")])]
+      ),
+      _vm._v(" "),
+      _c("login-modal", {
+        attrs: { showLoginModal: _vm.showLoginModal },
+        on: {
+          close: function($event) {
+            _vm.showLoginModal = false
+          }
+        }
+      })
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "icon is-small" }, [
+      _c("i", { staticClass: "fas fa-sign-in-alt" })
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-ca1555cc", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

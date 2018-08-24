@@ -14,7 +14,7 @@ window.axios.defaults.headers.common = {
 
 Vue.component('hero-component', require('./components/HeroComponent'));
 Vue.component('hero-component-full', require('./components/FullHeroComponent'));
-Vue.component('login-button', require('./components/LoginButton'));
+Vue.component('login-button', require('./components/buttons/TriggerLoginModal'));
 Vue.component('login-modal', require('./components/LoginModal'));
 
 const app = new Vue({
